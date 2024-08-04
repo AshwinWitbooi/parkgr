@@ -1,0 +1,4 @@
+INSERT INTO parkrun (NAME, STREET_NAME,STREET_NUMBER,SUBURB,CITY,PROVINCE) VALUES ('Bellville PR','Durban Road','193','Bellville','Cape Town','WC');
+INSERT INTO parkrun (NAME, STREET_NAME,STREET_NUMBER,SUBURB,CITY,PROVINCE) VALUES ('Paarl PR','Voor Trekker Street','1','Klein Nederberg','Paarl','WC');
+INSERT INTO parkrun (NAME, STREET_NAME,STREET_NUMBER,SUBURB,CITY,PROVINCE) VALUES ('Goodwood PR','Mckentyre Road','30','Goodwood','Cape Town','WC');
+INSERT INTO parkrun (NAME, STREET_NAME,STREET_NUMBER,SUBURB,CITY,PROVINCE) VALUES ('Blouberg Strand PR','Main Road','13','Blouberg Strand','Cape Town','WC');
