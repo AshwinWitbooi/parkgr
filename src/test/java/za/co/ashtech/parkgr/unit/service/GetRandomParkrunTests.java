@@ -1,6 +1,7 @@
 package za.co.ashtech.parkgr.unit.service;
 
 import static org.junit.jupiter.api.Assertions.assertNotNull;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
@@ -16,6 +17,7 @@ import org.mockito.junit.jupiter.MockitoExtension;
 import za.co.ashtech.parkgr.db.entities.Parkrun;
 import za.co.ashtech.parkgr.db.repository.ParkrunRepository;
 import za.co.ashtech.parkgr.service.GetRandomParkrunImp;
+import za.co.ashtech.parkgr.utils.ParkrunNotFoundException;
 
 @ExtendWith(MockitoExtension.class)
 class GetRandomParkrunTests {
@@ -40,8 +42,16 @@ class GetRandomParkrunTests {
 	}
 	
 	@Test
-	void getRandomParkrunTest() {
+	void getRandomParkrunTest() throws ParkrunNotFoundException {
 		assertNotNull(getRandomParkrun.getRandomParkrun());
 	}
 
+	@Test
+	void getRandomParkrunTestFail() throws ParkrunNotFoundException {
+		when(parkrunRepository.findAll()).thenReturn(null);
+		
+		assertThrows(ParkrunNotFoundException.class, () -> {
+			getRandomParkrun.getRandomParkrun();
+	    });
+	}
 }
