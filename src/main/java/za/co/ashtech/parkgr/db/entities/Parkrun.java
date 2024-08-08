@@ -21,5 +21,15 @@ public class Parkrun {
 	private String suburb;
 	private String city;
 	private String province;
+	
+	public Parkrun(String name, String street_name, String street_number, String suburb, String city, String province) {
+		super();
+		this.name = name;
+		this.street_name = street_name;
+		this.street_number = street_number;
+		this.suburb = suburb;
+		this.city = city;
+		this.province = province;
+	}	
 
 }
